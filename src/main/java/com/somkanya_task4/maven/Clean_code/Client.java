@@ -1,12 +1,23 @@
 package com.somkanya_task4.maven.Clean_code;
 import java.util.*;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.io.*;
 
 public class Client {
 
+	//get logger object
+	private static final Logger LOGGER = LogManager.getLogger(App.class);
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+		LOGGER.debug("Entered Main - THIS IS FROM DEBUG LOGGER");
+		LOGGER.info("THIS IS FROM INFO LOGGER");
+		LOGGER.warn("THIS IS FROM WARN LOGGER");
+		LOGGER.error("THIS IS FROM ERROR LOGGER");
+		LOGGER.fatal("THIS IS FROM FATAL LOGGER");
 		Scanner sc = new Scanner(System.in);
 		int choice;
 		choice=sc.nextInt();
